@@ -19,5 +19,5 @@ https://qiita.com/B3QP/items/d414687235bbfaab782b
 <b>Dependent modules are:</b>
 - @line/bot-sdk: 7.5.2
 - express: 4.18.1
-- lowdb: 3.0.0"
+- lowdb: 3.0.0
 
