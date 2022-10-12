@@ -3,7 +3,9 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import json
 
-html = urlopen("https://trc-adeac.trc.co.jp/Html/SystemRef/nsd.html")
+#The sample is a list of Japanese prime ministers.
+#html = urlopen("https://trc-adeac.trc.co.jp/Html/SystemRef/nsd.html")
+html = urlopen("Here's the source of the list you want to scrape")
 bsObj = BeautifulSoup(html, "html.parser")
 
 table = bsObj.findAll("table")[0]
