@@ -75,7 +75,7 @@ async function handleEvent(event) {
           replyText += '残り'+userRemainCnt(userId)+'件だよ。';
         }
       } else {
-        replyText = 'あ、今ので最後だね。あなたの勝ち！ また遊んでね。';
+        replyText = 'あ、今ので最後だね。あなたの勝ち！ おめでとう！！ また遊んでね。';
         resetGame(userId);
       } 
     } else if (userNameLists(userId).some((v) => v.name === event.message.text)){
@@ -143,7 +143,7 @@ async function updateUsedList(usedname, userId){
   await db.write() 
 }
 function selectName(userId){
-  let updateNameLists = userNameLists(userId)
+  let updateNameLists = userRemainder(userId)
   let keys = Object.keys(updateNameLists)
   let randomKey = keys[Math.floor(Math.random()*keys.length)]
   let selected =  updateNameLists[randomKey]
